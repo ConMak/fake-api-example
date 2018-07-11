@@ -1,0 +1,63 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "name": {
+            "type": "database",
+            "faker": "database.engine"
+        },
+        "description": {
+            "type": "string",
+            "faker": "commerce.productMaterial"
+        },
+        "dateRange": {
+            "type": "string",
+            "enum": ["year"]
+        },
+        "frequency": {
+            "type": "string",
+            "enum": ["HOURLY", "DAILY", "WEEKLY"]
+        },
+        "alertLevel": {
+            "type": "string",
+            "enum": ["low", "medium", "high"]
+        },
+        "sourceType": {
+            "type": "string",
+            "faker": "address.state"
+        },
+        "users": {
+            "type": "array",
+            "items": {
+                "type": "integer",
+                "minimum": 0
+            },         
+            "minItems": 1,
+            "maxItems": 5
+        },
+        "alertUsing": {
+            "type": "array",
+            "uniqueItems": true,
+            "minItems": 1,
+            "maxItems": 3,
+            "items": {
+                "type": "string",
+                "enum": ["email_instant", "email_digest", "web"]
+            }
+        }
+    },
+    "required": [
+        "id",
+        "name",
+        "description",
+        "dateRange",
+        "frequency",
+        "alertLevel",
+        "sourceType",
+        "users",
+        "alertUsing"
+    ]
+}

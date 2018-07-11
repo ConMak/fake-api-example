@@ -1,0 +1,20 @@
+{
+  "name": "json-serve-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.3.2",
+    "faker": "^4.1.0",
+    "json-schema-faker": "^0.5.0-rc13",
+    "json-server": "^0.12.1",
+    "lowdb": "^1.0.0"
+  },
+  "devDependencies": {}
+}
